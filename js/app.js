@@ -54,7 +54,7 @@ class Article{
     
        
         title.addEventListener('click', () => {
-            window.location = `/article.html?${this.id}`
+            window.location = `./article.html?${this.id}`
         })
        
     
