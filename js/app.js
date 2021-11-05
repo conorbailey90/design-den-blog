@@ -52,6 +52,9 @@ class Article{
         })
         let imageContainer = document.createElement('div');
         imageContainer.classList.add('image-container');
+        imageContainer.addEventListener('click', () => {
+            window.location = `./article.html?${this.id}`
+        })
         let imageInner = document.createElement('div');
         imageInner.style.backgroundImage = `url(${this.thumbnail})`;
         imageInner.classList.add('image-inner');

@@ -172,6 +172,10 @@ ul li i {
   cursor: pointer;
 }
 
+.image-container {
+  cursor: pointer;
+}
+
 /* Article page */
 
 .article-section {
