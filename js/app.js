@@ -39,12 +39,12 @@ class Article{
         let infoDiv = document.createElement('div');
         infoDiv.classList.add('article-info');
     
-        let title = document.createElement('h2');
+        let title = document.createElement('h3');
         title.innerText = this.title;
         title.classList.add('title');
         infoDiv.appendChild(title);
     
-        let articleDate = document.createElement('h');
+        let articleDate = document.createElement('h4');
         articleDate.innerText = `${this.date.slice(8, 10)}/${this.date.slice(5,7)}/${this.date.slice(0, 4)}`;
         infoDiv.appendChild(articleDate);
     
