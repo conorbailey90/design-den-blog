@@ -1,4 +1,4 @@
-// const apiUrl = 'https://thedesigndenblog.prismic.io/api/v2/'
+
 const apiUrl = 'https://thedesignden.prismic.io/api/v2/'
 
 const months = [
@@ -26,7 +26,7 @@ async function getPrismicMasterRef(){
 async function getArtciles(masterRef, month, year, firstRun){
     let response;
     if(firstRun){
-        response = await fetch(`${apiUrl}documents/search?ref=${masterRef}&q=[[at(document.type, "article")][date.year(document.first_publication_date, ${year})]]`);
+        response = await fetch(`${apiUrl}documents/search?ref=${masterRef}&q=[[at(document.type, "article")]]`);
     }else{
         response = await fetch(`${apiUrl}documents/search?ref=${masterRef}&q=[[at(document.type, "article")][date.month(document.first_publication_date, "${months[month]}")][date.year(document.first_publication_date, ${year})]]`);
     }
