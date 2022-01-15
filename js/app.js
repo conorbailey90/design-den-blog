@@ -6,7 +6,11 @@ const monthSelector = document.getElementById('month');
 let date = new Date();
 
 // Set month selector to current month / year
-monthSelector.value = `${date.getFullYear()}-${date.getMonth()+1}`
+monthSelector.value = `${date.getFullYear()}-${addZero(date.getMonth()+1)}`
+
+function addZero(num){
+    return num < 10 ? `0${num}` : num;
+}
 
 monthSelector.addEventListener('change', (e) => {
     articlesContainer.innerHTML = '';
